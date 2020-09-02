@@ -25,7 +25,7 @@ public class Collar {
     private Date date;
 
 
-    @ManyToOne
+    @ManyToOne (cascade=CascadeType.REFRESH)
     @JoinColumn(name = "Shop_idShop", insertable = false, updatable = false)
     private Shop shop;
 
@@ -94,7 +94,6 @@ public class Collar {
         this.author = author;
     }
 
-    /////////////// METHODS ///////////////
 
     public void createCurrentDate() {
         this.date = new Date();

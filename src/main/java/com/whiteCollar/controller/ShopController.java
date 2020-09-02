@@ -31,12 +31,15 @@ public class ShopController {
 
     //el error dice que faltaba este bean aquí!!!!!!!!!
 
+    /*
     @Bean(name="entityManagerFactory")
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 
         return sessionFactory;
     }
+
+     */
 
 
 
@@ -60,7 +63,6 @@ public class ShopController {
         return shopRepository.findAll();
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/shops") //
     Shop newShop(@RequestBody Shop newShop)
     {
